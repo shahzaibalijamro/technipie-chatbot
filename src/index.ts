@@ -18,11 +18,14 @@ async function main() {
     const standAloneQuestionPrompt = PromptTemplate.fromTemplate(standAloneQuestionTemplate);
     const chatBotResponseTemplate = chatBotPrompt;
     const chatBotResponsePrompt = PromptTemplate.fromTemplate(chatBotResponseTemplate);
-    const context = standAloneQuestionPrompt.pipe(llm).pipe(new StringOutputParser()).pipe(retriever);
+    const context = standAloneQuestionPrompt
+        .pipe(llm)
+        .pipe(new StringOutputParser())
+        .pipe(retriever)
+        .pipe(combineContext);
     const responseChain = chatBotResponsePrompt.pipe(llm).pipe(new StringOutputParser)
     const chain = RunnableSequence.from([
-        { context, original_input: new RunnablePassthrough() },
-        { context: prev => combineContext(prev.context), userQuestion: prev => prev.original_input.userQuestion },
+        { context, userQuestion: new RunnablePassthrough() },
         responseChain
     ])
 
