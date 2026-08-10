@@ -1,0 +1,446 @@
+{
+    "pageContent": "Technipie is a software development and digital solutions agency that helps startups, small businesses, and established companies build, improve, and maintain digital products.\n\nTechnipie provides services in web development, mobile app development, UI/UX design, WordPress development, artificial intelligence, custom software development, e-commerce development, API development, and ongoing technical support.\n\nTechnipie works with clients from multiple industries, including e-commerce, healthcare, education, real estate, finance, logistics, restaurants, professional services, and technology startups.\n\nThe agency focuses on building practical digital products that are scalable, maintainable, and easy for clients to operate.\n\nTechnipie can work with clients from the initial idea and requirements stage through design, development, testing, deployment, and post-launch maintenance.\n\nTechnipie offers both fixed-price projects and dedicated development engagements depending on the requirements of the client.",
+    "metadata": {
+        "source": "./knowledge-base.md",
+        "section": null,
+        "subsection": "Company Overview",
+        "loc": {
+            "lines": {
+                "from": 1,
+                "to": 11
+            }
+        }
+    }
+}
+{
+    "pageContent": "Company Name: Technipie\n\nIndustry: Software Development and Digital Solutions\n\nCompany Type: Software Development Agency\n\nFounded: 2021\n\nHeadquarters: Austin, Texas, United States\n\nPrimary Services:\n\n- Web Development\n- Mobile App Development\n- UI/UX Design\n- WordPress Development\n- AI Solutions\n- Custom Software Development\n- E-commerce Development\n- API Development\n- Cloud and Deployment Services\n- Software Maintenance and Support\n\nTechnipie serves clients globally and supports remote collaboration.\n\nThe company works with startups, small businesses, medium-sized businesses, and larger organizations.",
+    "metadata": {
+        "source": "./knowledge-base.md",
+        "section": "COMPANY INFORMATION",
+        "subsection": null
+    }
+}
+{
+    "pageContent":"Technipie develops custom websites and web applications for businesses and organizations.\n\nWeb development projects can range from simple marketing websites to complex SaaS platforms and business applications.\n\nTechnipie develops both frontend and backend systems.\n\nFrontend development focuses on the user interface and user experience of a web application.\n\nBackend development focuses on APIs, databases, authentication, business logic, integrations, and server-side functionality.\n\nTechnipie can build responsive web applications that work across desktop, tablet, and mobile devices.\n\nCommon web development technologies used by Technipie include:\n\n- HTML\n- CSS\n- JavaScript\n- TypeScript\n- React\n- Next.js\n- Node.js\n- Express.js\n- Python\n- Django\n- FastAPI\n- PHP\n- Laravel\n- MongoDB\n- PostgreSQL\n- MySQL\n\nThe exact technology stack is selected 
+according to project requirements rather than forcing every project to use the same technologies.","metadata":{"source":"./knowledge-base.md","section":"WEB DEVELOPMENT","subsection":null}}{
+        "pageContent": "Technipie builds custom web applications for businesses with requirements that cannot be satisfied effectively by an off-the-shelf website or CMS.\n\nExamples of custom web applications include:\n\n- SaaS platforms\n- Customer portals\n- Admin dashboards\n- Booking platforms\n- Management systems\n- CRM systems\n- Internal business tools\n- Learning management systems\n- Inventory management systems\n- Project management applications\n- Communication platforms\n\nCustom web applications can include authentication, role-based access control, dashboards, payments, notifications, file uploads, reporting, analytics, and third-party integrations.\n\nTechnipie can design both the frontend and backend architecture of custom applications.",
+        "metadata": {
+            "source": "./knowledge-base.md",
+            "section": "CUSTOM WEB APPLICATIONS",
+            "subsection": null
+        }
+    }
+{
+        "pageContent": "Technipie develops modern frontend applications with an emphasis on usability, responsiveness, accessibility, and performance.\n\nFrontend services include:\n\n- Responsive website development\n- React development\n- Next.js development\n- TypeScript development\n- Interactive dashboards\n- Component-based UI development\n- Form development\n- API integration\n- Frontend performance optimization\n- Accessibility improvements\n\nTechnipie can integrate frontend applications with REST APIs and other backend services.\n\nThe agency can also work with an existing backend when a client only requires frontend development.",
+        "metadata": {
+            "source": "./knowledge-base.md",
+            "section": "FRONTEND DEVELOPMENT",
+            "subsection": null
+        }
+    }
+{
+        "pageContent": "Technipie develops backend systems that provide APIs, authentication, business logic, database access, and integrations.\n\nBackend services include:\n\n- REST API development\n- Authentication systems\n- Authorization and permissions\n- Database design\n- Business logic\n- File storage\n- Payment integration\n- Email services\n- Notification systems\n- Third-party API integrations\n- Background jobs\n- Data processing\n- Reporting systems\n\nTechnipie commonly works with Node.js, Python, PHP, PostgreSQL, MongoDB, and MySQL for backend development.\n\nBackend systems can be deployed to cloud platforms such as AWS, Google Cloud, Microsoft Azure, and other hosting providers.",
+        "metadata": {
+            "source": "./knowledge-base.md",
+            "section": "BACKEND DEVELOPMENT",
+            "subsection": null
+        }
+    }
+{
+        "pageContent":"Technipie develops mobile applications for both Android and iOS.\n\nMobile development services include:\n\n- Native mobile applications\n- Cross-platform applications\n- Mobile UI development\n- API integration\n- Authentication\n- Push notifications\n- Payment integration\n- Location-based features\n- Camera and media functionality\n- App deployment\n\nTechnipie commonly uses React Native and Flutter for cross-platform mobile applications.\n\nFor projects that require platform-specific capabilities, Technipie can 
+also develop native Android or iOS applications.\n\nTechnipie can assist clients with publishing applications to the Apple App Store and Google Play Store.","metadata":{"source":"./knowledge-base.md","section":"MOBILE APP DEVELOPMENT","subsection":null}}{
+            "pageContent": "Technipie provides UI/UX design services before and during software development.\n\nThe design process typically includes:\n\n1. Requirements analysis\n2. User research\n3. Information architecture\n4. User flows\n5. Wireframes\n6. High-fidelity designs\n7. Interactive prototypes\n8. Design system creation\n9. Developer handoff\n\nTechnipie uses Figma for most UI/UX design projects.\n\nDesigners focus on creating interfaces that are visually consistent, easy to understand, responsive, and aligned with the client's brand.\n\nUI/UX design can be provided as a standalone service or as part of a complete software development project.",
+            "metadata": {
+                "source": "./knowledge-base.md",
+                "section": "UI/UX DESIGN",
+                "subsection": null
+            }
+        }
+{
+            "pageContent": "Technipie designs websites for businesses that need a professional online presence.\n\nWebsite design services include:\n\n- Corporate websites\n- Startup websites\n- Landing pages\n- Portfolio websites\n- Service websites\n- E-commerce websites\n- Product websites\n- Marketing websites\n\nWebsite designs can be created from an existing brand identity or developed from scratch.\n\nTechnipie can provide both the design and development of a website.",
+            "metadata": {
+                "source": "./knowledge-base.md",
+                "section": "WEBSITE DESIGN",
+                "subsection": null
+            }
+        }
+{
+            "pageContent": "Technipie provides WordPress development for businesses that want an easily manageable content management system.\n\nWordPress services include:\n\n- Custom WordPress websites\n- WordPress theme development\n- Custom theme customization\n- Plugin development\n- Plugin customization\n- WooCommerce development\n- WordPress migrations\n- WordPress performance optimization\n- WordPress security improvements\n- WordPress maintenance\n\nTechnipie can build custom WordPress websites instead of relying entirely on pre-built themes.\n\nWooCommerce can be used to create online stores with products, categories, carts, checkout, payments, and order management.\n\nTechnipie can also migrate existing websites from other platforms to WordPress.",
+            "metadata": {
+                "source": "./knowledge-base.md",
+                "section": "WORDPRESS DEVELOPMENT",
+                "subsection": null
+            }
+        }
+{
+            "pageContent": "Technipie develops e-commerce websites and applications for businesses that sell products or services online.\n\nE-commerce services include:\n\n- Product catalogs\n- Shopping carts\n- Checkout systems\n- Payment integration\n- Order management\n- Customer accounts\n- Discount codes\n- Inventory management\n- Product search\n- Product filtering\n- Shipping integration\n- Sales reporting\n\nTechnipie can develop e-commerce solutions using WooCommerce, Shopify, or custom technologies depending on the project.\n\nCustom e-commerce platforms can be built when a client's requirements exceed the capabilities of standard e-commerce platforms.",
+            "metadata": {
+                "source": "./knowledge-base.md",
+                "section": "E-COMMERCE DEVELOPMENT",
+                "subsection": null
+            }
+        }
+{
+            "pageContent": "Technipie develops AI-powered applications and features for businesses.\n\nAI services include:\n\n- AI chatbots\n- AI customer support systems\n- Document analysis\n- AI content generation\n- AI-powered search\n- Retrieval-Augmented Generation\n- AI agents\n- Voice AI\n- AI automation\n- Recommendation systems\n- Text classification\n- Summarization\n- Data extraction\n\nTechnipie can integrate commercial AI models through APIs.\n\nAI applications can be connected to a company's internal documents, databases, APIs, and business systems.",
+            "metadata": {
+                "source": "./knowledge-base.md",
+                "section": "ARTIFICIAL INTELLIGENCE SOLUTIONS",
+                "subsection": null
+            }
+        }
+{
+            "pageContent": "Technipie develops AI chatbots that can communicate with customers or employees using natural language.\n\nAI chatbot applications can be used for:\n\n- Customer support\n- Frequently asked questions\n- Product recommendations\n- Internal company knowledge\n- Sales assistance\n- Lead qualification\n- Appointment assistance\n\nChatbots can be integrated into websites and applications.\n\nTechnipie can build chatbots that use a company's own documents and knowledge base rather than relying only on general-purpose model knowledge.",
+            "metadata": {
+                "source": "./knowledge-base.md",
+                "section": "AI CHATBOTS",
+                "subsection": null
+            }
+        }
+{
+            "pageContent":"Technipie can build Retrieval-Augmented Generation systems for organizations that need AI applications capable of answering questions using private or domain-specific information.\n\nA typical RAG system can include:\n\n1. Document collection\n2. Document processing\n3. Text chunking\n4. Embedding generation\n5. Vector database storage\n6. 
+Semantic search\n7. Context retrieval\n8. AI-generated responses\n\nRAG systems can be used with company documentation, product manuals, policies, technical documentation, FAQs, and internal knowledge bases.\n\nTechnipie can implement RAG systems using vector databases and embedding models appropriate for the client's requirements.","metadata":{"source":"./knowledge-base.md","section":"RETRIEVAL-AUGMENTED GENERATION","subsection":null}}{
+                "pageContent": "Technipie develops AI agents capable of performing tasks using external tools and APIs.\n\nAn AI agent can be given access to tools such as:\n\n- Database queries\n- Web search\n- File operations\n- APIs\n- Email systems\n- Calendar systems\n- Business applications\n\nAgents can use these tools to perform multi-step tasks.\n\nFor example, an AI sales assistant could receive a customer request, search product information, check availability through an API, and prepare a response.\n\nActions that could significantly affect customer data or business systems can be configured to require human approval.",
+                "metadata": {
+                    "source": "./knowledge-base.md",
+                    "section": "AI AGENTS",
+                    "subsection": null
+                }
+            }
+{
+                "pageContent": "Technipie can develop voice-enabled AI applications.\n\nVoice AI solutions can support:\n\n- Speech recognition\n- Voice conversations\n- AI responses\n- Text-to-speech\n- Voice-based customer support\n- Appointment scheduling\n- Voice assistants\n\nVoice applications can be integrated with websites, mobile applications, and communication platforms.",
+                "metadata": {
+                    "source": "./knowledge-base.md",
+                    "section": "VOICE AI",
+                    "subsection": null
+                }
+            }
+{
+                "pageContent": "Technipie develops APIs that allow different applications and services to communicate with each other.\n\nAPI services include:\n\n- REST API development\n- Authentication APIs\n- Payment APIs\n- User management APIs\n- Data APIs\n- Third-party API integrations\n- Webhooks\n- API documentation\n\nAPIs can be developed as part of a larger application or as standalone services.\n\nTechnipie can integrate third-party services such as payment providers, communication platforms, analytics systems, and AI services.",
+                "metadata": {
+                    "source": "./knowledge-base.md",
+                    "section": "API DEVELOPMENT",
+                    "subsection": null
+                }
+            }
+{
+                "pageContent": "Technipie can integrate applications with external services.\n\nExamples include:\n\n- Stripe\n- PayPal\n- Google Maps\n- Google Analytics\n- OpenAI\n- Anthropic\n- Twilio\n- SendGrid\n- AWS\n- GitHub\n- Slack\n- Microsoft services\n- Social media platforms\n\nThe exact integrations available for a project depend on the requirements and the APIs provided by the third-party service.",
+                "metadata": {
+                    "source": "./knowledge-base.md",
+                    "section": "THIRD-PARTY INTEGRATIONS",
+                    "subsection": null
+                }
+            }
+{
+                "pageContent": "Technipie provides cloud deployment and infrastructure services for software applications.\n\nCloud services can include:\n\n- Application deployment\n- Database deployment\n- Domain configuration\n- SSL certificates\n- DNS configuration\n- CI/CD pipelines\n- Docker deployment\n- Server configuration\n- Monitoring\n- Backups\n\nTechnipie commonly works with AWS, Google Cloud, Microsoft Azure, Vercel, and other cloud hosting platforms.\n\nFor Node.js applications, Technipie can configure production servers using tools such as Docker, Nginx, and process managers.",
+                "metadata": {
+                    "source": "./knowledge-base.md",
+                    "section": "CLOUD AND DEPLOYMENT",
+                    "subsection": null
+                }
+            }
+{
+                "pageContent":"Technipie provides ongoing maintenance for existing software applications.\n\nMaintenance services include:\n\n- Bug fixing\n- Security updates\n- Dependency updates\n- Performance optimization\n- Server maintenance\n- Database maintenance\n- Feature development\n- Monitoring\n- Backup management\n\nClients can purchase ongoing maintenance 
+and support after the initial development project is completed.","metadata":{"source":"./knowledge-base.md","section":"SOFTWARE MAINTENANCE","subsection":null}}{
+                    "pageContent": "Technipie's typical development process consists of several stages.",
+                    "metadata": {
+                        "source": "./knowledge-base.md",
+                        "section": "SOFTWARE DEVELOPMENT PROCESS",
+                        "subsection": null
+                    }
+                }
+{
+                    "pageContent":"The team meets with the client to understand the business, target users, requirements, goals, and technical constraints.\n\nThe team identifies the major features 
+and creates an initial project scope.","metadata":{"source":"./knowledge-base.md","section":"SOFTWARE DEVELOPMENT PROCESS","subsection":"Stage 1: Discovery"}}{
+                        "pageContent": "Technipie creates a development plan based on the requirements.\n\nThe team determines the technology stack, architecture, milestones, and estimated timeline.",
+                        "metadata": {
+                            "source": "./knowledge-base.md",
+                            "section": "SOFTWARE DEVELOPMENT PROCESS",
+                            "subsection": "Stage 2: Planning"
+                        }
+                    }
+{
+                        "pageContent": "Designers create wireframes and high-fidelity interfaces.\n\nThe client reviews the designs before development begins.",
+                        "metadata": {
+                            "source": "./knowledge-base.md",
+                            "section": "SOFTWARE DEVELOPMENT PROCESS",
+                            "subsection": "Stage 3: UI/UX Design"
+                        }
+                    }
+{
+                        "pageContent": "Developers implement the frontend, backend, database, integrations, and other required functionality.\n\nDevelopment is usually divided into smaller milestones.",
+                        "metadata": {
+                            "source": "./knowledge-base.md",
+                            "section": "SOFTWARE DEVELOPMENT PROCESS",
+                            "subsection": "Stage 4: Development"
+                        }
+                    }
+{
+                        "pageContent": "The application is tested for functional problems, usability issues, performance problems, and security concerns.\n\nIssues discovered during testing are fixed before production deployment.",
+                        "metadata": {
+                            "source": "./knowledge-base.md",
+                            "section": "SOFTWARE DEVELOPMENT PROCESS",
+                            "subsection": "Stage 5: Testing"
+                        }
+                    }
+{
+                        "pageContent": "The completed application is deployed to the client's production environment.\n\nTechnipie can configure domains, SSL certificates, databases, servers, and other infrastructure.",
+                        "metadata": {
+                            "source": "./knowledge-base.md",
+                            "section": "SOFTWARE DEVELOPMENT PROCESS",
+                            "subsection": "Stage 6: Deployment"
+                        }
+                    }
+{
+                        "pageContent": "After launch, Technipie can continue providing maintenance, bug fixes, monitoring, and additional feature development.",
+                        "metadata": {
+                            "source": "./knowledge-base.md",
+                            "section": "SOFTWARE DEVELOPMENT PROCESS",
+                            "subsection": "Stage 7: Launch and Support"
+                        }
+                    }
+{
+                        "pageContent": "Technipie works on several categories of projects.\n\nCommon project types include:\n\n- Business websites\n- SaaS platforms\n- Mobile applications\n- E-commerce stores\n- AI applications\n- Customer portals\n- Internal business applications\n- Admin dashboards\n- Booking systems\n- CRM systems\n- Learning platforms\n- Healthcare applications\n- Real estate platforms\n- Financial applications\n- Restaurant platforms\n- Logistics systems",
+                        "metadata": {
+                            "source": "./knowledge-base.md",
+                            "section": "PROJECT TYPES",
+                            "subsection": null
+                        }
+                    }
+{
+                        "pageContent": "Technipie prefers an iterative development approach.\n\nLarge projects are divided into smaller milestones so that clients can review progress throughout development.\n\nClients can provide feedback during development rather than waiting until the entire project is finished.\n\nFor complex projects, Technipie may recommend developing a Minimum Viable Product first.\n\nAn MVP contains the minimum set of features required to validate the product idea with real users.\n\nAfter validating the MVP, additional features can be developed in later phases.",
+                        "metadata": {
+                            "source": "./knowledge-base.md",
+                            "section": "DEVELOPMENT APPROACH",
+                            "subsection": null
+                        }
+                    }
+{
+                        "pageContent": "Project timelines depend on project complexity.\n\nA simple business website may take between 1 and 3 weeks.\n\nA custom website with multiple pages and integrations may take between 3 and 6 weeks.\n\nA medium-sized web application may take between 6 and 12 weeks.\n\nA complex SaaS platform or custom software product can require several months.\n\nMobile applications typically require between 8 and 16 weeks depending on complexity.\n\nAI projects can take between 3 and 12 weeks depending on the AI functionality, integrations, and amount of custom development required.\n\nThese estimates are general guidelines and do not represent guaranteed delivery dates.",
+                        "metadata": {
+                            "source": "./knowledge-base.md",
+                            "section": "PROJECT TIMELINES",
+                            "subsection": null
+                        }
+                    }
+{
+                        "pageContent": "Technipie does not use one fixed price for every project.\n\nPricing depends on factors such as:\n\n- Number of features\n- Project complexity\n- Number of platforms\n- Design requirements\n- Third-party integrations\n- AI requirements\n- Backend complexity\n- Security requirements\n- Project timeline\n\nSmall business websites generally cost less than custom software applications.\n\nWordPress projects generally cost less than fully custom web applications.\n\nAI applications with custom integrations and RAG systems generally require more development effort than basic AI chatbot implementations.\n\nClients receive a project estimate after the requirements have been reviewed.",
+                        "metadata": {
+                            "source": "./knowledge-base.md",
+                            "section": "PRICING",
+                            "subsection": null
+                        }
+                    }
+{
+                        "pageContent":"For fixed-price projects, Technipie typically divides payments into project milestones.\n\nA typical payment structure may include:\n\n- Initial deposit\n- Design 
+milestone\n- Development milestone\n- Testing milestone\n- Final payment\n\nThe exact payment schedule is agreed upon before development begins.\n\nLarger projects may use monthly billing or milestone-based billing.","metadata":{"source":"./knowledge-base.md","section":"PAYMENT STRUCTURE","subsection":null}}{
+                            "pageContent": "Technipie uses different technologies depending on the requirements of each project.\n\nCommon frontend technologies include:\n\n- React\n- Next.js\n- JavaScript\n- TypeScript\n- HTML\n- CSS\n- Tailwind CSS\n\nCommon backend technologies include:\n\n- Node.js\n- Express.js\n- Python\n- Django\n- FastAPI\n- PHP\n- Laravel\n\nCommon databases include:\n\n- PostgreSQL\n- MongoDB\n- MySQL\n- Redis\n\nCommon mobile technologies include:\n\n- React Native\n- Flutter\n- Swift\n- Kotlin\n\nCommon cloud and infrastructure technologies include:\n\n- AWS\n- Google Cloud\n- Microsoft Azure\n- Docker\n- Nginx\n- Vercel",
+                            "metadata": {
+                                "source": "./knowledge-base.md",
+                                "section": "TECHNOLOGY STACK",
+                                "subsection": null
+                            }
+                        }
+{
+                            "pageContent":"Technipie considers security during application development.\n\nSecurity practices can include:\n\n- HTTPS\n- Secure authentication\n- Password hashing\n- Role-based access control\n- Input validation\n- API authentication\n- Access control\n- Secure file uploads\n- Database security\n- Dependency updates\n\nSecurity requirements depend on 
+the type of application and the sensitivity of the data involved.\n\nApplications handling sensitive business or customer information may require additional security controls.","metadata":{"source":"./knowledge-base.md","section":"SECURITY","subsection":null}}{
+                                "pageContent":"Technipie designs and develops databases for web and mobile applications.\n\nDatabase services include:\n\n- Database schema design\n- Data modeling\n- Query optimization\n- Indexing\n- Data migrations\n- Database backups\n- Database integrations\n\nTechnipie works with both relational and NoSQL databases.\n\nPostgreSQL and MySQL are commonly used for applications that require relational data.\n\nMongoDB can be used for applications that benefit from flexible document-based data structures.\n\nRedis can be used for 
+caching, sessions, queues, and other high-speed data requirements.","metadata":{"source":"./knowledge-base.md","section":"DATABASE DEVELOPMENT","subsection":null}}{
+                                    "pageContent": "Technipie performs testing before software is released to production.\n\nTesting may include:\n\n- Functional testing\n- API testing\n- UI testing\n- Responsive testing\n- Cross-browser testing\n- Integration testing\n- Regression testing\n- Performance testing\n\nThe amount of testing depends on the project's complexity and requirements.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "QUALITY ASSURANCE",
+                                        "subsection": null
+                                    }
+                                }
+{
+                                    "pageContent": "Technipie maintains regular communication with clients during development.\n\nClients may receive:\n\n- Progress updates\n- Development demonstrations\n- Design previews\n- Milestone reports\n- Testing reports\n\nClients can provide feedback during milestone reviews.\n\nCommunication channels may include email, video calls, project management tools, and messaging platforms.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "CLIENT COMMUNICATION",
+                                        "subsection": null
+                                    }
+                                }
+{
+                                    "pageContent": "After a project launches, Technipie can provide continued technical support.\n\nPost-launch support can include:\n\n- Bug fixes\n- Server monitoring\n- Performance optimization\n- Security updates\n- Content updates\n- Feature development\n- Technical consultation\n\nSupport agreements can be customized according to the client's needs.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "POST-LAUNCH SUPPORT",
+                                        "subsection": null
+                                    }
+                                }
+{
+                                    "pageContent": "Yes. Technipie builds business websites, marketing websites, landing pages, e-commerce websites, and custom web applications.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "COMMON CLIENT QUESTIONS",
+                                        "subsection": "Does Technipie build websites?"
+                                    }
+                                }
+{
+                                    "pageContent": "Yes. Technipie develops Android and iOS applications using technologies such as React Native and Flutter, as well as native technologies when required.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "COMMON CLIENT QUESTIONS",
+                                        "subsection": "Does Technipie develop mobile applications?"
+                                    }
+                                }
+{
+                                    "pageContent": "Yes. Technipie provides custom WordPress development, theme customization, plugin development, WooCommerce development, migrations, optimization, and maintenance.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "COMMON CLIENT QUESTIONS",
+                                        "subsection": "Does Technipie offer WordPress development?"
+                                    }
+                                }
+{
+                                    "pageContent": "Yes. Technipie develops AI chatbots, AI agents, RAG applications, document processing systems, AI automation, voice AI applications, and other AI-powered solutions.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "COMMON CLIENT QUESTIONS",
+                                        "subsection": "Does Technipie provide AI development?"
+                                    }
+                                }
+{
+                                    "pageContent": "Yes. Technipie develops custom SaaS platforms including frontend applications, backend APIs, databases, authentication, billing, dashboards, and integrations.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "COMMON CLIENT QUESTIONS",
+                                        "subsection": "Can Technipie build a custom SaaS platform?"
+                                    }
+                                }
+{
+                                    "pageContent": "Yes. UI/UX design is available as a standalone service or as part of a complete software development project.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "COMMON CLIENT QUESTIONS",
+                                        "subsection": "Does Technipie provide UI/UX design?"
+                                    }
+                                }
+{
+                                    "pageContent": "Yes. Technipie can maintain, fix, optimize, or extend existing software applications.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "COMMON CLIENT QUESTIONS",
+                                        "subsection": "Can Technipie work with an existing application?"
+                                    }
+                                }
+{
+                                    "pageContent": "Yes. Technipie can integrate Stripe and other payment providers when the required APIs are available.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "COMMON CLIENT QUESTIONS",
+                                        "subsection": "Can Technipie integrate Stripe?"
+                                    }
+                                }
+{
+                                    "pageContent": "Yes. Technipie provides deployment and cloud infrastructure services.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "COMMON CLIENT QUESTIONS",
+                                        "subsection": "Can Technipie deploy applications?"
+                                    }
+                                }
+{
+                                    "pageContent": "A simple business website may take approximately 1 to 3 weeks. More complex websites may take 3 to 6 weeks or longer.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "COMMON CLIENT QUESTIONS",
+                                        "subsection": "How long does a website take?"
+                                    }
+                                }
+{
+                                    "pageContent": "There is no universal fixed price. Pricing depends on the project's scope, complexity, integrations, design requirements, and technology requirements.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "COMMON CLIENT QUESTIONS",
+                                        "subsection": "How much does a project cost?"
+                                    }
+                                }
+{
+                                    "pageContent": "Yes. Technipie works with startups and can help with product discovery, UI/UX design, MVP development, deployment, and future feature development.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "COMMON CLIENT QUESTIONS",
+                                        "subsection": "Does Technipie work with startups?"
+                                    }
+                                }
+{
+                                    "pageContent": "Yes. Technipie can build MVPs designed to validate a product idea before investing in a larger production system.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "COMMON CLIENT QUESTIONS",
+                                        "subsection": "Can Technipie build an MVP?"
+                                    }
+                                }
+{
+                                    "pageContent": "Yes. Technipie provides ongoing maintenance, bug fixes, security updates, monitoring, and feature development.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "COMMON CLIENT QUESTIONS",
+                                        "subsection": "Does Technipie offer maintenance?"
+                                    }
+                                }
+{
+                                    "pageContent": "Technipie can implement technical SEO foundations such as semantic HTML, metadata, sitemap configuration, page performance improvements, and search-engine-friendly website structures.\n\nFull-scale SEO campaigns, content marketing, and ongoing search-engine optimization may require a separate engagement.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "COMMON CLIENT QUESTIONS",
+                                        "subsection": "Does Technipie provide SEO?"
+                                    }
+                                }
+{
+                                    "pageContent": "Technipie can build an e-commerce platform with:\n\n- Product management\n- Categories\n- Shopping cart\n- Checkout\n- Payments\n- Customer accounts\n- Order management\n- Inventory\n- Discounts\n- Admin dashboard",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "EXAMPLES OF PROJECTS TECHNIPIE CAN BUILD",
+                                        "subsection": "E-commerce Platform"
+                                    }
+                                }
+{
+                                    "pageContent": "A SaaS application can include:\n\n- User registration\n- Authentication\n- Subscription billing\n- User roles\n- Dashboard\n- Database\n- APIs\n- Notifications\n- Analytics\n- Admin panel",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "EXAMPLES OF PROJECTS TECHNIPIE CAN BUILD",
+                                        "subsection": "SaaS Application"
+                                    }
+                                }
+{
+                                    "pageContent": "An AI customer support system can include:\n\n- Website chatbot\n- Company knowledge base\n- Document ingestion\n- Embeddings\n- Vector database\n- RAG pipeline\n- Conversation history\n- Human escalation\n- Analytics",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "EXAMPLES OF PROJECTS TECHNIPIE CAN BUILD",
+                                        "subsection": "AI Customer Support Agent"
+                                    }
+                                }
+{
+                                    "pageContent": "A restaurant application could include:\n\n- Online menu\n- Food ordering\n- Table reservations\n- Customer accounts\n- Online payments\n- Order management\n- Restaurant dashboard\n- Notifications",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "EXAMPLES OF PROJECTS TECHNIPIE CAN BUILD",
+                                        "subsection": "Restaurant Application"
+                                    }
+                                }
+{
+                                    "pageContent": "A real estate platform could include:\n\n- Property listings\n- Property search\n- Filters\n- Property details\n- Agent profiles\n- User accounts\n- Favorites\n- Contact forms\n- Admin dashboard",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "EXAMPLES OF PROJECTS TECHNIPIE CAN BUILD",
+                                        "subsection": "Real Estate Platform"
+                                    }
+                                }
+{
+                                    "pageContent": "Technipie does not guarantee that every project can be completed within a particular timeframe.\n\nProject estimates are based on the requirements known at the beginning of the project.\n\nChanges to requirements after development begins may affect both cost and timeline.\n\nThird-party services can introduce limitations outside Technipie's control.\n\nThird-party API availability, pricing, rate limits, and policies are controlled by the respective service providers.\n\nAI systems may produce incorrect information and should be appropriately tested and monitored before being used in critical workflows.\n\nTechnipie recommends human review for AI systems that make decisions affecting customers, finances, security, or other high-impact areas.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "IMPORTANT LIMITATIONS",
+                                        "subsection": null
+                                    }
+                                }
+{
+                                    "pageContent": "Technipie is a software development agency providing:\n\n- Web development\n- Mobile development\n- UI/UX design\n- WordPress development\n- WooCommerce development\n- E-commerce development\n- Custom software development\n- SaaS development\n- AI solutions\n- AI chatbots\n- AI agents\n- RAG systems\n- Voice AI\n- API development\n- Third-party integrations\n- Cloud deployment\n- Software maintenance\n\nTechnipie works with startups, small businesses, medium-sized companies, and larger organizations.\n\nThe agency can handle complete software projects from discovery and design through development, deployment, and ongoing maintenance.",
+                                    "metadata": {
+                                        "source": "./knowledge-base.md",
+                                        "section": "KNOWLEDGE BASE SUMMARY",
+                                        "subsection": null
+                                    }
+                                }
