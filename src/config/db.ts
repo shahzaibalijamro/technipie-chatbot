@@ -13,6 +13,12 @@ export async function connectDB() {
         // Configure your MongoDB collection
         const database = client.db("technipie-chatbot");
         const collection = database.collection("test");
+        const sessionsCollection = database.collection("sessions");
+        const logsCollection = database.collection("logs")
+        await sessionsCollection.createIndex(
+            { createdAt: 1 },
+            { expireAfterSeconds: 60 * 60 * 24 }
+        );
         const dbConfig = {
             collection,
             indexName: "vector_index",
@@ -21,7 +27,9 @@ export async function connectDB() {
         };
         return {
             dbConfig,
-            client
+            client,
+            sessionsCollection,
+            logsCollection
         };
     } catch (error) {
         // If connection fails, close the client to avoid resource leaks
