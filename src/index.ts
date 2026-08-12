@@ -109,9 +109,19 @@ app.post("/api/chat", async (req, res) => {
 
         res.json({ answer: response, sessionId });
 
-    } catch (error) {
+    } catch (error: any) { // Type-cast or type-narrow the error
         console.error("Error in /api/chat:", error);
-        res.status(500).json({ error: "We're having trouble right now, try again shortly." });
+
+        // Safely check for Google/HTTP status codes
+        const statusCode = error?.status || error?.response?.status;
+
+        if (statusCode === 429) {
+            return res.status(429).json({
+                error: "The AI service is currently busy due to rate limits. Please wait a few moments and try again."
+            });
+        }
+
+        return res.status(500).json({ error: "We're having trouble right now, try again shortly." });
     }
 });
 

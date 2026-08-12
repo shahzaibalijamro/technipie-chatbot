@@ -6,7 +6,7 @@ if (!process.env.GEMINI_API_KEY) {
 
 export const llm = new ChatGoogleGenerativeAI({
     apiKey: process.env.GEMINI_API_KEY,
-    model: "gemini-3.6-flash",
+    model: "gemini-3.6-flash-lite",
     maxRetries: 6,
     temperature: 0.1
 })
