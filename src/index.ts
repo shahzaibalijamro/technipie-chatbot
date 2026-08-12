@@ -17,25 +17,46 @@ import { RunnablePassthrough, RunnableSequence } from "@langchain/core/runnables
 import { ChatMessage } from "@langchain/core/messages";
 
 const app = express();
-app.use(cors({ origin: 'https://tech-7-miles.vercel.app', credentials: true }));
+
+// CORS must be registered FIRST, before anything else that could throw,
+// so that even a failure further down the chain still returns CORS headers.
+const ALLOWED_ORIGIN = "https://tech-7-miles.vercel.app";
+app.use(cors({ origin: ALLOWED_ORIGIN, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 
-// Configure rate limiting
-const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 20, // Limit each IP to 20 requests per `window`
-    standardHeaders: true,
-    legacyHeaders: false,
-    store: new MongoStore({
-        uri: process.env.MONGODB_URI!,
-        collectionName: "rateLimits",
-        expireTimeMs: 15 * 60 * 1000
-    }),
-    message: { error: "Too many requests, please try again later." }
-});
+// --- Rate limiter setup (resilient) ---------------------------------------
+// If MongoStore/Mongo connection fails at import time, we don't want that to
+// crash the whole serverless function before cors() has a chance to run.
+// A failed rate limiter init just means we skip rate limiting rather than
+// taking down the entire API (and silently breaking CORS as a side effect).
+let limiter: ReturnType<typeof rateLimit> | undefined;
+try {
+    if (!process.env.MONGODB_URI) {
+        console.error("MONGODB_URI is not set — skipping rate limiter init.");
+    } else {
+        limiter = rateLimit({
+            windowMs: 15 * 60 * 1000, // 15 minutes
+            max: 20, // Limit each IP to 20 requests per `window`
+            standardHeaders: true,
+            legacyHeaders: false,
+            store: new MongoStore({
+                uri: process.env.MONGODB_URI,
+                collectionName: "rateLimits",
+                expireTimeMs: 15 * 60 * 1000,
+            }),
+            message: { error: "Too many requests, please try again later." },
+        });
+    }
+} catch (err) {
+    console.error("Failed to initialize rate limiter:", err);
+}
 
-app.use("/api/", limiter as any);
+if (limiter) {
+    app.use("/api/", limiter as any);
+} else {
+    console.warn("Rate limiter is disabled for this instance.");
+}
 
 app.post("/api/chat", async (req, res) => {
     try {
@@ -123,6 +144,16 @@ app.post("/api/chat", async (req, res) => {
 
         return res.status(500).json({ error: "We're having trouble right now, try again shortly." });
     }
+});
+
+// --- Catch-all error handler ------------------------------------------------
+// Safety net for any error thrown outside the route's own try/catch (e.g. in
+// middleware). Because cors() is registered before this, the CORS headers it
+// already attached to the response will still be present on error responses.
+app.use((err: any, req: express.Request, res: express.Response, _next: express.NextFunction) => {
+    console.error("Unhandled error:", err);
+    if (res.headersSent) return;
+    res.status(500).json({ error: "Internal server error" });
 });
 
 export default app;
