@@ -1,10 +1,17 @@
 import { MongoClient } from "mongodb";
 
+let cachedClient: MongoClient | null = null;
+let cachedResult: any = null;
 
 export async function connectDB() {
     if (!process.env.MONGODB_URI) {
         throw new Error("API KEYS NOT FOUND!")
     }
+
+    if (cachedClient && cachedResult) {
+        return cachedResult;
+    }
+
     const client = new MongoClient(process.env.MONGODB_URI);
     try {
         // Connect to MongoDB
@@ -25,12 +32,16 @@ export async function connectDB() {
             textKey: "text",
             embeddingKey: "embedding",
         };
-        return {
+
+        cachedClient = client;
+        cachedResult = {
             dbConfig,
             client,
             sessionsCollection,
             logsCollection
         };
+
+        return cachedResult;
     } catch (error) {
         // If connection fails, close the client to avoid resource leaks
         await client.close().catch(() => { });

@@ -21,42 +21,41 @@ app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 
-async function startServer() {
-    const { dbConfig, sessionsCollection, logsCollection } = await connectDB();
+// Configure rate limiting
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 20, // Limit each IP to 20 requests per `window`
+    standardHeaders: true,
+    legacyHeaders: false,
+    store: new MongoStore({
+        uri: process.env.MONGODB_URI!,
+        collectionName: "rateLimits",
+        expireTimeMs: 15 * 60 * 1000
+    }),
+    message: { error: "Too many requests, please try again later." }
+});
 
-    const vectorStore = new MongoDBAtlasVectorSearch(embeddingModel, dbConfig);
-    const retriever = vectorStore.asRetriever({
-        k: 5,
-        searchType: "mmr",
-        searchKwargs: {
-            fetchK: 15,  // pool size pulled before MMR reranks it down to k
-            lambda: 0.5, // 0 = max diversity, 1 = pure similarity (your old behavior)
-        },
-    });
+app.use("/api/", limiter as any);
 
-    // Configure rate limiting
-    const limiter = rateLimit({
-        windowMs: 15 * 60 * 1000, // 15 minutes
-        max: 20, // Limit each IP to 50 requests per `window`
-        standardHeaders: true,
-        legacyHeaders: false,
-        store: new MongoStore({
-            uri: process.env.MONGODB_URI!,
-            collectionName: "rateLimits",
-            expireTimeMs: 15 * 60 * 1000
-        }),
-        message: { error: "Too many requests, please try again later." }
-    });
+app.post("/api/chat", async (req, res) => {
+    try {
+        const { dbConfig, sessionsCollection, logsCollection } = await connectDB();
 
-    app.use("/api/", limiter as any);
+        const vectorStore = new MongoDBAtlasVectorSearch(embeddingModel, dbConfig);
+        const retriever = vectorStore.asRetriever({
+            k: 5,
+            searchType: "mmr",
+            searchKwargs: {
+                fetchK: 15,
+                lambda: 0.5,
+            },
+        });
 
-    app.post("/api/chat", async (req, res) => {
-        try {
-            let sessionId = req.cookies.sessionId;
-            if (!sessionId) {
-                sessionId = crypto.randomUUID();
-                res.cookie("sessionId", sessionId, { httpOnly: true }); // Session cookie
-            }
+        let sessionId = req.cookies.sessionId;
+        if (!sessionId) {
+            sessionId = crypto.randomUUID();
+            res.cookie("sessionId", sessionId, { httpOnly: true }); // Session cookie
+        }
 
             const { question } = req.body;
             if (!question) {
@@ -110,16 +109,10 @@ async function startServer() {
 
             res.json({ answer: response, sessionId });
 
-        } catch (error) {
-            console.error("Error in /api/chat:", error);
-            res.status(500).json({ error: "We're having trouble right now, try again shortly." });
-        }
-    });
+    } catch (error) {
+        console.error("Error in /api/chat:", error);
+        res.status(500).json({ error: "We're having trouble right now, try again shortly." });
+    }
+});
 
-    const PORT = process.env.PORT || 3000;
-    app.listen(PORT, () => {
-        console.log(`Server is running on port ${PORT}`);
-    });
-}
-
-startServer().catch(console.error);
+export default app;
