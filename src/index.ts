@@ -17,6 +17,7 @@ import { RunnablePassthrough, RunnableSequence } from "@langchain/core/runnables
 import { ChatMessage } from "@langchain/core/messages";
 
 const app = express();
+app.set("trust proxy", 1);
 
 // CORS must be registered FIRST, before anything else that could throw,
 // so that even a failure further down the chain still returns CORS headers.
