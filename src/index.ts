@@ -17,7 +17,7 @@ import { RunnablePassthrough, RunnableSequence } from "@langchain/core/runnables
 import { ChatMessage } from "@langchain/core/messages";
 
 const app = express();
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors({ origin: 'https://tech-7-miles.vercel.app', credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 
@@ -57,57 +57,57 @@ app.post("/api/chat", async (req, res) => {
             res.cookie("sessionId", sessionId, { httpOnly: true }); // Session cookie
         }
 
-            const { question } = req.body;
-            if (!question) {
-                return res.status(400).json({ error: "Question is required." });
-            }
+        const { question } = req.body;
+        if (!question) {
+            return res.status(400).json({ error: "Question is required." });
+        }
 
-            const memory = new MongoDBChatMessageHistory({ collection: sessionsCollection, sessionId });
-            const logger = new MongoDBChatMessageHistory({ collection: logsCollection, sessionId });
+        const memory = new MongoDBChatMessageHistory({ collection: sessionsCollection, sessionId });
+        const logger = new MongoDBChatMessageHistory({ collection: logsCollection, sessionId });
 
-            await sessionsCollection.updateOne(
-                { sessionId },
-                { $setOnInsert: { sessionId, createdAt: new Date() } },
-                { upsert: true }
-            );
+        await sessionsCollection.updateOne(
+            { sessionId },
+            { $setOnInsert: { sessionId, createdAt: new Date() } },
+            { upsert: true }
+        );
 
-            memory.addUserMessage(question);
-            logger.addMessage(new ChatMessage(question, "user"));
+        memory.addUserMessage(question);
+        logger.addMessage(new ChatMessage(question, "user"));
 
-            const contextChain = standAloneQuestionPrompt
-                .pipe(llm)
-                .pipe(new StringOutputParser())
-                .pipe(prev => {
-                    logger.addMessage(new ChatMessage(prev, "standalone-question"));
-                    console.log(prev)
-                    // Fallback to original question if LLM returns empty string
-                    return prev.trim() ? prev : question;
-                })
-                .pipe(retriever)
-                .pipe(prev => {
-                    logger.addMessage(new ChatMessage(JSON.stringify(prev), "retrieved-chunks"));
-                    console.log(prev)
-                    return prev;
-                })
-                .pipe(combineContext);
+        const contextChain = standAloneQuestionPrompt
+            .pipe(llm)
+            .pipe(new StringOutputParser())
+            .pipe(prev => {
+                logger.addMessage(new ChatMessage(prev, "standalone-question"));
+                console.log(prev)
+                // Fallback to original question if LLM returns empty string
+                return prev.trim() ? prev : question;
+            })
+            .pipe(retriever)
+            .pipe(prev => {
+                logger.addMessage(new ChatMessage(JSON.stringify(prev), "retrieved-chunks"));
+                console.log(prev)
+                return prev;
+            })
+            .pipe(combineContext);
 
-            const responseChain = chatBotResponsePrompt.pipe(llm).pipe(new StringOutputParser());
+        const responseChain = chatBotResponsePrompt.pipe(llm).pipe(new StringOutputParser());
 
-            const chain = RunnableSequence.from([
-                { context: contextChain, og_input: new RunnablePassthrough() },
-                { context: prev => prev.context, userQuestion: prev => prev.og_input.userQuestion, memory: prev => prev.og_input.memory },
-                responseChain
-            ]);
+        const chain = RunnableSequence.from([
+            { context: contextChain, og_input: new RunnablePassthrough() },
+            { context: prev => prev.context, userQuestion: prev => prev.og_input.userQuestion, memory: prev => prev.og_input.memory },
+            responseChain
+        ]);
 
-            const conversationHistory = await maybeSummarizeConversation(memory, sessionsCollection);
-            logger.addMessage(new ChatMessage(JSON.stringify(conversationHistory), "memory"));
+        const conversationHistory = await maybeSummarizeConversation(memory, sessionsCollection);
+        logger.addMessage(new ChatMessage(JSON.stringify(conversationHistory), "memory"));
 
-            const response = await chain.invoke({ userQuestion: question, memory: structureMemory(conversationHistory) });
+        const response = await chain.invoke({ userQuestion: question, memory: structureMemory(conversationHistory) });
 
-            logger.addMessage(new ChatMessage(response, "chatbot-response"));
-            memory.addAIMessage(response);
+        logger.addMessage(new ChatMessage(response, "chatbot-response"));
+        memory.addAIMessage(response);
 
-            res.json({ answer: response, sessionId });
+        res.json({ answer: response, sessionId });
 
     } catch (error) {
         console.error("Error in /api/chat:", error);
