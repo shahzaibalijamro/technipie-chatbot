@@ -25,7 +25,14 @@ async function startServer() {
     const { dbConfig, sessionsCollection, logsCollection } = await connectDB();
 
     const vectorStore = new MongoDBAtlasVectorSearch(embeddingModel, dbConfig);
-    const retriever = vectorStore.asRetriever({ k: 3 });
+    const retriever = vectorStore.asRetriever({
+        k: 5,
+        searchType: "mmr",
+        searchKwargs: {
+            fetchK: 15,  // pool size pulled before MMR reranks it down to k
+            lambda: 0.5, // 0 = max diversity, 1 = pure similarity (your old behavior)
+        },
+    });
 
     // Configure rate limiting
     const limiter = rateLimit({
@@ -73,12 +80,14 @@ async function startServer() {
                 .pipe(new StringOutputParser())
                 .pipe(prev => {
                     logger.addMessage(new ChatMessage(prev, "standalone-question"));
+                    console.log(prev)
                     // Fallback to original question if LLM returns empty string
                     return prev.trim() ? prev : question;
                 })
                 .pipe(retriever)
                 .pipe(prev => {
                     logger.addMessage(new ChatMessage(JSON.stringify(prev), "retrieved-chunks"));
+                    console.log(prev)
                     return prev;
                 })
                 .pipe(combineContext);

@@ -1,15 +1,12 @@
-import { ChatOpenAI } from "@langchain/openai"
+import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
 
-if (!process.env.OPENROUTER_API_KEY || !process.env.OPENROUTER_MODEL || !process.env.OPENROUTER_BASE_URL) {
+if (!process.env.GEMINI_API_KEY) {
     throw new Error("API KEYS NOT FOUND!")
 }
 
-export const llm = new ChatOpenAI({
-    apiKey: process.env.OPENROUTER_API_KEY,
-    model: process.env.OPENROUTER_MODEL,
-    configuration: {
-        baseURL: process.env.OPENROUTER_BASE_URL
-    },
+export const llm = new ChatGoogleGenerativeAI({
+    apiKey: process.env.GEMINI_API_KEY,
+    model: "gemini-3.6-flash",
     maxRetries: 6,
-    timeout: 60 * 60
+    temperature: 0.1
 })

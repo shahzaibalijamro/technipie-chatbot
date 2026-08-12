@@ -1,13 +1,10 @@
-import { OpenAIEmbeddings } from "@langchain/openai";
+import { GoogleGenerativeAIEmbeddings } from "@langchain/google-genai";
 
-if (!process.env.NVIDIA_API_KEY || !process.env.NVIDIA_BASE_URL || !process.env.NVIDIA_MODEL) {
+if (!process.env.GEMINI_API_KEY) {
     throw new Error("API KEYS NOT FOUND!")
 }
 
-export const embeddingModel = new OpenAIEmbeddings({
-    apiKey: process.env.NVIDIA_API_KEY,
-    configuration: {
-        baseURL: process.env.NVIDIA_BASE_URL,
-    },
-    model: process.env.NVIDIA_MODEL
+export const embeddingModel = new GoogleGenerativeAIEmbeddings({
+    apiKey: process.env.GEMINI_API_KEY,
+    model: "gemini-embedding-2"
 })

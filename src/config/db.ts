@@ -12,7 +12,7 @@ export async function connectDB() {
 
         // Configure your MongoDB collection
         const database = client.db("technipie-chatbot");
-        const collection = database.collection("test");
+        const collection = database.collection("chunks");
         const sessionsCollection = database.collection("sessions");
         const logsCollection = database.collection("logs")
         await sessionsCollection.createIndex(
